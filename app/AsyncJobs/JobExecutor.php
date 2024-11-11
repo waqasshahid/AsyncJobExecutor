@@ -47,6 +47,6 @@ class JobExecutor
 
     private static function logJobError($jobClassName, $jobMethod, $errorMessage)
     {
-        Log::channel('async_jobs_errors')->error("Job: $jobClassName::$jobMethod - Error: $errorMessage");
+        Log::channel('background_jobs_errors')->error("Job: $jobClassName::$jobMethod - Error: $errorMessage");
     }
 }

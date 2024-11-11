@@ -10,7 +10,7 @@ class JobDashboardController extends Controller
     public function index()
     {
         $jobLogs = File::get(storage_path('logs/async_jobs.log'));
-        $errorLogs = File::get(storage_path('logs/background_jobs_errors.log.log'));
+        $errorLogs = File::get(storage_path('logs/background_jobs_errors.log'));
         return view('dashboard', compact('jobLogs', 'errorLogs'));
     }
 }
