@@ -127,6 +127,18 @@ return [
             'path' => storage_path('logs/laravel.log'),
         ],
 
+        'async_jobs' => [
+            'driver' => 'single',
+            'path' => storage_path('logs/async_jobs.log'), // Log file for async job statuses
+            'level' => 'info',
+        ],
+
+        'background_jobs_errors' => [
+            'driver' => 'single',
+            'path' => storage_path('logs/background_jobs_errors.log'), // Log file for async job errors
+            'level' => 'error',
+        ],
+
     ],
 
 ];
