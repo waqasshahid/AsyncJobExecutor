@@ -8,7 +8,6 @@ class JobExecutor
 {
     public static function run($jobClassName, $jobMethod, $params = [])
     {
-        // Authorization check: only allow jobs listed in the allowed_jobs config file
         if (!in_array($jobClassName, config('allowed_jobs.classes'))) {
             throw new \Exception("Unauthorized job class: $jobClassName");
         }
